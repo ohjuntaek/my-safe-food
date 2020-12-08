@@ -14,7 +14,7 @@ class FoodRepositoryTest {
 
     @Test
     void queryTest() {
-        List<Food> all = foodRepository.findAll();
+        List<Food> all = foodRepository.searchFood(foodFilter);
         for (Food food : all) {
             System.out.println(food);
         }

@@ -15,7 +15,7 @@ class FoodServiceTest {
 
     @DisplayName("전체를 조회한다.")
     void findAllTest() {
-        List<FoodDto> foodDtos = foodService.getFoodDtos();
+        List<FoodDto> foodDtos = foodService.searchFoodDtos();
 
         for (FoodDto foodDto : foodDtos) {
             System.out.println(foodDto);

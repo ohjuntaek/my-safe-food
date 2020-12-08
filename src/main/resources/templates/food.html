@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
+
 <head>
     <title>Title</title>
     <meta charset="UTF-8">
 </head>
 <body>
+<div class="container">
+    <form role="form" th:object="${foodFilter}" action="/food" method="post">
+        <input type="text" th:field="*{name}"/>
+        <input type="submit"/>
+    </form>
 
-HI
-
-<table>
-    <tr th:each = "food : ${foods}">
-        <td th:text="${food.sampleId}"></td>
-        <td th:text="${food.foodName}"></td>
-        <td th:text="${food.maker}"></td>
-        <td th:text="${food.investYear}"></td>
-        <td th:text="${food.category}"></td>
-        <td th:text="${food.detailCategory}"></td>
-        <td th:text="${food.foodCode}"></td>
-        <td th:text="${food.source}"></td>
-    </tr>
-</table>
+    <table>
+        <tr th:each = "food : ${foods}">
+            <td th:text="${food.sampleId}"></td>
+            <td th:text="${food.foodName}"></td>
+            <td th:text="${food.maker}"></td>
+            <td th:text="${food.investYear}"></td>
+            <td th:text="${food.category}"></td>
+            <td th:text="${food.detailCategory}"></td>
+            <td th:text="${food.foodCode}"></td>
+            <td th:text="${food.source}"></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

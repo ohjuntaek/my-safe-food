@@ -20,7 +20,10 @@ repositories {
 }
 
 dependencies {
-//    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    // https://mvnrepository.com/artifact/de.codecentric/chaos-monkey-spring-boot
+    compile group: 'de.codecentric', name: 'chaos-monkey-spring-boot', version: '2.1.1'
+
 //    implementation 'org.springframework.boot:spring-boot-starter-batch'
 //    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
